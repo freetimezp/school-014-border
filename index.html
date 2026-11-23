@@ -1,18 +1,477 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+        <title>Border Studio — CSS Learning 014</title>
 
-<body>
-    start
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <script src="./assets/js/main.js"></script>
-</body>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <!-- ===============================
+         NAVIGATION
+    ================================ -->
+
+        <header class="topbar">
+            <a href="#" class="brand">
+                <span class="brand-mark">B.</span>
+                <span>Border<span class="brand-light">Studio</span></span>
+            </a>
+
+            <div class="topbar-center">
+                <span class="course-label">CSS PLAYGROUND</span>
+                <span class="course-number">LESSON 014</span>
+            </div>
+
+            <a href="#playground" class="topbar-link">
+                Experiment <span>↗</span>
+            </a>
+        </header>
+
+        <!-- ===============================
+         MAIN CONTENT
+    ================================ -->
+
+        <main class="page-container">
+            <!-- HERO -->
+
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        CSS FUNDAMENTALS / 014
+                    </div>
+
+                    <h1>
+                        Give your<br />
+                        elements a <span>boundary.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        A border can be bold, subtle, playful or elegant.
+                        Explore how four simple styles transform the same
+                        element.
+                    </p>
+
+                    <a href="#border-gallery" class="hero-button">
+                        Explore border styles
+                        <span>↓</span>
+                    </a>
+                </div>
+
+                <!-- Decorative hero composition -->
+
+                <div class="hero-art">
+                    <div class="art-card art-card-back">
+                        <span>CSS / 014</span>
+                    </div>
+
+                    <div class="art-card art-card-front">
+                        <div class="art-card-top">
+                            <span>DESIGN ELEMENT</span>
+                            <span>01—04</span>
+                        </div>
+
+                        <div class="art-shape">
+                            <div class="art-shape-inner"></div>
+                        </div>
+
+                        <div class="art-card-bottom">
+                            <span>Border</span>
+                            <strong>Style collection</strong>
+                        </div>
+                    </div>
+
+                    <div class="art-sticker">
+                        <span>MAKE</span>
+                        <span>IT</span>
+                        <span>VISIBLE</span>
+                    </div>
+
+                    <div class="art-orbit orbit-one"></div>
+                    <div class="art-orbit orbit-two"></div>
+                </div>
+            </section>
+
+            <!-- BORDER GALLERY -->
+
+            <section class="section gallery-section" id="border-gallery">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">01 / VISUAL LIBRARY</span>
+                        <h2>Four ways to draw a line.</h2>
+                    </div>
+
+                    <p>Same box. Same dimensions. Different personalities.</p>
+                </div>
+
+                <div class="border-grid">
+                    <article class="border-card solid-card">
+                        <div class="border-card-header">
+                            <span class="border-index">01</span>
+                            <span class="border-tag">CLASSIC</span>
+                        </div>
+
+                        <div class="border-demo solid-demo">
+                            <div class="demo-inner">SOLID</div>
+                        </div>
+
+                        <h3>Solid</h3>
+                        <p>A continuous, uninterrupted line.</p>
+
+                        <code>border-style: solid;</code>
+                    </article>
+
+                    <article class="border-card dashed-card">
+                        <div class="border-card-header">
+                            <span class="border-index">02</span>
+                            <span class="border-tag">DYNAMIC</span>
+                        </div>
+
+                        <div class="border-demo dashed-demo">
+                            <div class="demo-inner">DASHED</div>
+                        </div>
+
+                        <h3>Dashed</h3>
+                        <p>Short line segments with rhythm.</p>
+
+                        <code>border-style: dashed;</code>
+                    </article>
+
+                    <article class="border-card dotted-card">
+                        <div class="border-card-header">
+                            <span class="border-index">03</span>
+                            <span class="border-tag">PLAYFUL</span>
+                        </div>
+
+                        <div class="border-demo dotted-demo">
+                            <div class="demo-inner">DOTTED</div>
+                        </div>
+
+                        <h3>Dotted</h3>
+                        <p>A sequence of small circular dots.</p>
+
+                        <code>border-style: dotted;</code>
+                    </article>
+
+                    <article class="border-card double-card">
+                        <div class="border-card-header">
+                            <span class="border-index">04</span>
+                            <span class="border-tag">DECORATIVE</span>
+                        </div>
+
+                        <div class="border-demo double-demo">
+                            <div class="demo-inner">DOUBLE</div>
+                        </div>
+
+                        <h3>Double</h3>
+                        <p>Two parallel lines in one border.</p>
+
+                        <code>border-style: double;</code>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CSS EXPLANATION -->
+
+            <section class="section syntax-section" id="syntax">
+                <div class="syntax-layout">
+                    <div class="syntax-content">
+                        <span class="section-label">02 / THE CODE</span>
+
+                        <h2>One property.<br />Four personalities.</h2>
+
+                        <p>
+                            The <strong>border-style</strong> property controls
+                            how the line around an element is rendered. It works
+                            together with border width and color.
+                        </p>
+
+                        <div class="syntax-note">
+                            <span class="note-icon">✳</span>
+                            <p>
+                                A border needs a visible style. Without one, its
+                                default style is
+                                <code>none</code>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="syntax-code">
+                        <div class="code-window">
+                            <div class="code-window-header">
+                                <div class="window-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <span>styles.css</span>
+                            </div>
+
+                            <pre><code><span class="code-selector">.card</span> {
+  <span class="code-property">border-width</span>: <span class="code-value">4px</span>;
+  <span class="code-property">border-style</span>: <span class="code-value">dashed</span>;
+  <span class="code-property">border-color</span>: <span class="code-value">#4477E8</span>;
+}</code></pre>
+                        </div>
+
+                        <div class="syntax-result">
+                            <div class="syntax-result-box"></div>
+                            <span>LIVE CSS RESULT</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PLAYGROUND -->
+
+            <section class="section playground-section" id="playground">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">03 / INTERACTIVE LAB</span>
+                        <h2>Build your own border.</h2>
+                    </div>
+
+                    <p>Change the values. Watch the element respond.</p>
+                </div>
+
+                <div class="playground">
+                    <!-- Controls -->
+
+                    <div class="playground-controls">
+                        <div class="control-heading">
+                            <span>YOUR SETTINGS</span>
+                            <button id="reset-playground" type="button">
+                                Reset ↺
+                            </button>
+                        </div>
+
+                        <!-- Border style -->
+
+                        <div class="control-group">
+                            <label>Border style</label>
+
+                            <div class="style-options" id="style-options">
+                                <button
+                                    class="style-option active"
+                                    data-style="solid"
+                                >
+                                    <span
+                                        class="style-preview solid-preview"
+                                    ></span>
+                                    Solid
+                                </button>
+
+                                <button
+                                    class="style-option"
+                                    data-style="dashed"
+                                >
+                                    <span
+                                        class="style-preview dashed-preview"
+                                    ></span>
+                                    Dashed
+                                </button>
+
+                                <button
+                                    class="style-option"
+                                    data-style="dotted"
+                                >
+                                    <span
+                                        class="style-preview dotted-preview"
+                                    ></span>
+                                    Dotted
+                                </button>
+
+                                <button
+                                    class="style-option"
+                                    data-style="double"
+                                >
+                                    <span
+                                        class="style-preview double-preview"
+                                    ></span>
+                                    Double
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Border width -->
+
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="border-width">Border width</label>
+                                <span id="border-width-value">4px</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                id="border-width"
+                                min="1"
+                                max="16"
+                                value="4"
+                            />
+                        </div>
+
+                        <!-- Border color -->
+
+                        <div class="control-group">
+                            <label>Border color</label>
+
+                            <div class="color-options" id="color-options">
+                                <button
+                                    class="color-option active"
+                                    data-color="#FA6848"
+                                    style="--swatch: #fa6848"
+                                    aria-label="Coral"
+                                ></button>
+
+                                <button
+                                    class="color-option"
+                                    data-color="#4477E8"
+                                    style="--swatch: #4477e8"
+                                    aria-label="Blue"
+                                ></button>
+
+                                <button
+                                    class="color-option"
+                                    data-color="#24A27B"
+                                    style="--swatch: #24a27b"
+                                    aria-label="Green"
+                                ></button>
+
+                                <button
+                                    class="color-option"
+                                    data-color="#9A6ADD"
+                                    style="--swatch: #9a6add"
+                                    aria-label="Violet"
+                                ></button>
+
+                                <button
+                                    class="color-option"
+                                    data-color="#25251F"
+                                    style="--swatch: #25251f"
+                                    aria-label="Black"
+                                ></button>
+                            </div>
+                        </div>
+
+                        <!-- Individual border sides -->
+
+                        <div class="control-group">
+                            <label>Border sides</label>
+
+                            <div class="side-options" id="side-options">
+                                <button
+                                    class="side-option active"
+                                    data-side="all"
+                                >
+                                    All
+                                </button>
+
+                                <button class="side-option" data-side="top">
+                                    Top
+                                </button>
+
+                                <button class="side-option" data-side="right">
+                                    Right
+                                </button>
+
+                                <button class="side-option" data-side="bottom">
+                                    Bottom
+                                </button>
+
+                                <button class="side-option" data-side="left">
+                                    Left
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preview -->
+
+                    <div class="playground-preview">
+                        <div class="preview-top">
+                            <span>LIVE PREVIEW</span>
+                            <span class="preview-status">
+                                <span></span>
+                                INTERACTIVE
+                            </span>
+                        </div>
+
+                        <div class="preview-stage" id="preview-stage">
+                            <div class="preview-box" id="preview-box">
+                                <div class="preview-box-content">
+                                    <span class="preview-box-number">014</span>
+                                    <strong>Border<br />Studio</strong>
+                                    <span class="preview-box-caption">
+                                        DESIGN YOUR EDGE
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-code" id="preview-code">
+                            <code>border: 4px solid #FA6848;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MINI CHALLENGE -->
+
+            <section class="section challenge-section">
+                <div class="challenge-card">
+                    <div class="challenge-decoration">✳</div>
+
+                    <div class="challenge-content">
+                        <span class="section-label">04 / QUICK CHALLENGE</span>
+
+                        <h2>Can you spot<br />the difference?</h2>
+
+                        <p>
+                            A designer wants a border that looks like small
+                            circular points instead of continuous lines. Which
+                            style should they choose?
+                        </p>
+
+                        <div class="challenge-options" id="challenge-options">
+                            <button data-answer="solid">Solid</button>
+                            <button data-answer="dashed">Dashed</button>
+                            <button data-answer="dotted">Dotted</button>
+                            <button data-answer="double">Double</button>
+                        </div>
+
+                        <div
+                            class="challenge-feedback hidden"
+                            id="challenge-feedback"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+                <a href="#" class="brand footer-brand">
+                    <span class="brand-mark">B.</span>
+                    <span>Border<span class="brand-light">Studio</span></span>
+                </a>
+
+                <p>Small details. Better interfaces.</p>
+
+                <span class="footer-number">HTML / CSS — 014</span>
+            </footer>
+        </main>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
